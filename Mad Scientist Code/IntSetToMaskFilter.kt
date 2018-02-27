@@ -16,7 +16,7 @@
 // which determines the max 'order' of filter you want, or even go infinitely (or as many bits as you have).
 
 // Additionally some systems allow "negative filters" which could optimize things further. This is not implemented.
-// Ex... a 2nd order 0x7E0, and a 1st  order 0x7E2 is the same as a 3rd order 0x7E0 with a NEGATIVE 0x7E3 filter.
+// Ex... a 2nd order 0x7E0, and a 1st  order 0x7E2 is the same as a 3rd order 0x7E0 with a NEGATIVE 0x7E3 first order filter.
 
 val listFilters = ArrayList<filterScheme>()
         // Return if there isn't any numbers

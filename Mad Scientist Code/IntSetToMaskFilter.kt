@@ -1,5 +1,20 @@
 // Used when you have a set of numbers, and want a viable filter based on those numbers using a bit mask pass filter.
-// Only loners pairs quads and octas are shown here. 
+// Only loners pairs quads and octas are shown here.
+
+// In other words. It's a solution to an optimization problem.
+
+// Ex.... We want to make a filter for 0x7E0 and 0x7E1.
+// This algorithim will a 2nd order filter scheme of 0x7E0 with a mask of 2.
+
+// Ex2.... We want to make a filter for 0x7E0...0x7E3
+// This algorithim will return a 3rd order filter scheme of 0x7E0 with a mask of 4.
+
+// Very useful for Automotive CAN BUS Networks where you are only interested in some data, and want to remove bad results early.
+
+
+// This is really a prototype algorithim. "It Works". I believe it can be reduced to a simpler form, where you spply an argument
+// which determines the max 'order' of filter you want, or even go infinitely (or as many bits as you have).
+// Additionally some systems allow "negative filters" which could optimize things further. This is not implemented.
 
 val listFilters = ArrayList<filterScheme>()
         // Return if there isn't any numbers

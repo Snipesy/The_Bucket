@@ -14,7 +14,9 @@
 
 // This is really a prototype algorithim. "It Works". I believe it can be reduced to a simpler form, where you spply an argument
 // which determines the max 'order' of filter you want, or even go infinitely (or as many bits as you have).
+
 // Additionally some systems allow "negative filters" which could optimize things further. This is not implemented.
+// Ex... a 2nd order 0x7E0, and a 1st  order 0x7E2 is the same as a 3rd order 0x7E0 with a NEGATIVE 0x7E3 filter.
 
 val listFilters = ArrayList<filterScheme>()
         // Return if there isn't any numbers
